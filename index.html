@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home work 13</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div>
+      <h3>Звичайний прямокутник</h3>
+      <svg width="300" height="200" >
+        <rect width="200" height="100" x="50" y="50" style="fill:yellow;stroke-width:5;stroke:red" />
+      </svg>
+    </div>
+
+    <div class="circle">
+      <h3>Звичайне коло</h3>
+      <svg width="300" height="1200">
+        <circle cx="150" cy="100" r="55" />
+      </svg>
+    </div>
+
+    <div class="ellipse">
+      <h3>Еліпс з текстом</h3>
+      <svg width="300" height="200">
+        <ellipse cx="150" cy="100" rx="100" ry="50" />
+        <text x="150" y="100" text-anchor="middle" fill="white" dominant-baseline="central" >FORD</text>
+
+      </svg>
+    </div>
+
+    <div class="square">
+      <h3>Квадрат с градієнтом</h3>
+    <svg width="300" height="200">
+      <rect width="150" height="150" x="75" y="25" fill="url(#gradient)" stroke="url(#gradient2)"  />
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%" >
+          <stop offset="0%"   stop-color="red" />
+          <stop offset="50%"   stop-color="yellow" />
+          <stop offset="100%"   stop-color="green" />
+        </linearGradient>
+
+        <linearGradient id="gradient2" x1="100%" y1="100%" x2="0%" y2="0%" >
+          <stop offset="0%"   stop-color="red" />
+         <stop offset="50%"   stop-color="yellow" />
+          <stop offset="100%"   stop-color="green" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  </div>
+
+  <div class="content">
+    <h2>Наведи на мене</h2>
+    <div class="radar ">
+      <svg width="400" height="300">
+
+        <circle class="scan" cx="200" cy="150" r="120" />
+        <circle class="scan" cx="200" cy="150" r="90" />
+        <circle class="scan" cx="200" cy="150" r="60" />
+        <circle class="scan" cx="200" cy="150" r="30" />
+
+        <line x1="80" y1="150" x2="320" y2="150" />
+        <line x1="200" y1="30" x2="200" y2="270" />
+        <line class="search" x1="80" y1="150" x2="200" y2="150" />
+
+        <circle class="focus" cx="147" cy="176" r="10" />
+        <circle class="focus" cx="262" cy="186" r="10" />
+
+        <circle class="radar__wave" cx="200" cy="150" r="120" />
+        <circle class="radar__wave two" cx="200" cy="150" r="120" />
+
+      </svg>
+    </div>
+  </div>
+</body>
+</html>

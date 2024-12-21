@@ -1,0 +1,151 @@
+body {
+    width: 1200px;
+    margin: 20px auto;
+}
+
+.wrapper {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.wrapper div {
+    height: 220px;
+    width: 300px;
+    border: 1px solid black;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.circle {
+    stroke: blueviolet;
+    stroke-width: 5;
+    fill: lightgreen;
+}
+
+div ellipse {
+    fill: blue;
+    stroke: black;
+    stroke-width: 5px;
+}
+
+.ellipse text {
+    background-color: lightgray;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.square {
+    stroke-width: 5px;
+}
+
+.content {
+    height: 400px;
+    width: 400px;
+    margin: 20px auto;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.radar {
+    position: absolute;
+    fill: none;
+    stroke: darkgreen;
+    stroke-width: 2;
+ }
+
+.scan {
+    fill: green;
+}
+
+.focus {
+    fill: white;
+    display: none;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.radar:hover  .focus{
+    display: block;
+    animation: focus__wave 2s infinite;
+}
+
+.radar:hover  .search{
+    animation: sweep 4s linear infinite;
+    display: block;
+    fill: none;
+}
+
+.search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    stroke: white;
+    stroke-width: 5;
+    stroke-linecap: round;
+    transform-origin: center center;
+    display: none;
+}
+
+.radar__wave {
+    stroke: white;
+    stroke-width: 5;
+    display: none;
+    fill: none;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.radar:hover .radar__wave{
+    display: block;
+    animation: wave 2s infinite;
+}
+
+.radar:hover .two {
+    animation-delay: 1s;
+}
+
+@keyframes sweep {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes focus__wave {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
